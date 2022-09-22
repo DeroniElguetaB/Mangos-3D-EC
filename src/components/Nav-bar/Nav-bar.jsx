@@ -35,13 +35,13 @@ const Navbar = () => {
             </nav> */}
             <div className="container-fluid bg-black preNavbar">
                 <ul className="row">
-                    <li className="tituloMangos col-md-4">
+                    <li className="tituloMangos col-md-5">
                         <Link to={'/'}><h2>MANGOS 3D</h2></Link>
                     </li>
-                    <li className="col-md-3 logoNavbar">
+                    <li className="col-md-5 logoNavbar">
                         <LogoMangosIcono/>
                     </li>
-                    <li className="sesion row col-md-5">
+                    <li className="sesion row col-md-2">
                         <p>
                             <Link>Crear cuenta</Link> | 
                             <Link> Iniciar sesion  </Link> 
