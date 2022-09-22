@@ -1,0 +1,36 @@
+.ilcontainer{
+    background-color: orangered;
+}
+
+.Item{
+    list-style: none;
+    padding-top: 20px;
+}
+
+.Item ul li{
+    text-decoration: none;
+}
+
+.carditem {
+    width: 480px;
+    padding: 15px;
+}
+
+.cardetail {
+    max-width: 1700px;
+    height: 452px;
+    margin: 2px;
+    margin-top: 20px;
+}
+
+.itemsimagen {
+    width: 550px;
+    height: 450px;
+}
+
+.columnas {
+    padding-left: 15px;
+}
+.detail{
+    background-color: orangered;
+}
