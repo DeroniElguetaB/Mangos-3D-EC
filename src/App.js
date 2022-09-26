@@ -12,7 +12,7 @@ function App() {
   return (
     <Provider>
       <BrowserRouter>
-        <Routes style ={{color: "white"}}>
+        <Routes>
           <Route exact path='/' element={<Inicio/>}/>
           <Route exact path='/Compania' element={<Compania/>}/>
           <Route exact path='/Productos' element={<Productos/>}/>

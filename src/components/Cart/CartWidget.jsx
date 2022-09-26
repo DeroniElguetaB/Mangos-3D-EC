@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-import {CartContext} from "../Context/Context";
+import React, { useContext } from "react"
+import { Link } from "react-router-dom"
+import {CartContext} from "../Context/Context"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
-import { faTrash } from "@fortawesome/free-solid-svg-icons"; 
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 const CartWidget = () => {
     const {cartTotal, clear} = useContext(CartContext);

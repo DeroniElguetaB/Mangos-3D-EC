@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import '../Main/main.css';
-import ItemDetailContainer from "../Productos/ItemDetailContainer";
-import ItemListContainer from "../Productos/ItemListContainer";
 
 class Main extends Component {
     render () {
