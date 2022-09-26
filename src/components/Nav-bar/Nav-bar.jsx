@@ -1,5 +1,4 @@
 import React from "react"
-import '../Nav-bar/navBar.css'
 import '../LogoMangosIcono'
 import LogoMangosIcono from "../LogoMangosIcono"
 import { Link } from "react-router-dom"

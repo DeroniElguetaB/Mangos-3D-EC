@@ -17,7 +17,7 @@ class Footer extends Component {
         //         <p class="lead">Todos los derechos reservados por copyright</p>
         //     </div>
         // </div>
-            <div className="container-fluid bg-black">
+            <div className="container-fluid bg-black footer">
                 <div className="row">
                     <section className="col-md-4">
                         <h2>Contactenos</h2>
