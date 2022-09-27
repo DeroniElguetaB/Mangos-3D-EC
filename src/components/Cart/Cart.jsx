@@ -27,7 +27,7 @@ const Cart = () => {
                                     <td colSpan={"5"} className="text-end">
                                         <Link onClick={() => {clear()}}>
                                                 <button type="button" className="remove btn fondo position-relative" title="Eliminar Producto">
-                                                    <FontAwesomeIcon icon={faTrash} />
+                                                Vaciar Carrito  <FontAwesomeIcon icon={faTrash} />
                                                 </button>
                                         </Link>
                                     </td>
@@ -52,8 +52,8 @@ const Cart = () => {
                                     <td className="text-end fw-bold">${cartSuma()}</td>
                                     <td className="text-end">
                                         <Link to={"/checkout"} title="Finalizar Compra">
-                                        <button type="button" className="carrito btn fondo position-relative" title="Finalizar Compra" value="Finalizar Compra" width="16">
-                                            <FontAwesomeIcon icon={faCartShopping} />
+                                        <button type="button" className="carrito btn fondo position-relative" title="Finalizar Compra" width="16">
+                                        Finalizar Compra <FontAwesomeIcon icon={faCartShopping} />
                                         </button>
                                         </Link>
                                     </td>
