@@ -2,47 +2,32 @@ import React from "react";
 import ItemList from './ItemList'
 import { useEffect } from "react";
 import { useState } from "react";
-import { products } from '../Mock/Products'
+import { getFirestore, getDocs, collection, query, where } from "firebase/firestore";
 import { useParams } from "react-router-dom";
+import Loading from "../Loading/Loading";
 
 const ItemListContainer = () => {
 
+    const [loading, setLoading] = useState(true)
     const [items, setItems] = useState([]);
-    const {genero} = useParams ();
+    const {id} = useParams ();
 
     useEffect(() => {
-        let categoria = "";
-
-        if (genero === "Maquinas"){
-            categoria = "Maquinas";
-        }
-        else if (genero === "Mates"){
-            categoria = "Mates";
-        }
-        else {
-            categoria = "all";
-        }
-
-        const promesa = new Promise ((resolve, reject) => {
-            setTimeout(() => {
-                resolve(products);
-            }, 2000)
-        })
-        promesa.then((resultado) => {
-            if (categoria === "all"){
-                setItems(resultado)
+        const db = getFirestore();
+        const itemsCollection = collection(db, "items");
+        const queryItems = id ? query(itemsCollection, where("categoria", "==", id)) : itemsCollection;
+        getDocs(queryItems).then((snapShot) => {
+            if (snapShot.size > 0) {
+                setItems(snapShot.docs.map(item => ({id:item.id, ...item.data()})));
+                setLoading(false);
             }
-            else {
-                const array_productos = products.filter (producto => producto.categoria === categoria)
-                setItems(array_productos)
-            }
-        })
-    }, [genero])
+        });
+    }, [id])
 
     return (
         <div className="container-fluid ilcontainer">
             <h1>Nuestros productos</h1>
-            <ItemList items = {items}/>
+            {loading ? <Loading /> : <ItemList items = {items}/>}
         </div>
     )
 }

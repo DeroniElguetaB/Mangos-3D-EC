@@ -5,7 +5,7 @@ class LogoMangosIcono extends Component {
     render () {
         return(
             <div>
-                <img className='logoMangos' src={logoMangos} alt="logotipo" />
+                <img className='logoMangos' src={logoMangos} alt="logotipo"/>
             </div>
         )
     }

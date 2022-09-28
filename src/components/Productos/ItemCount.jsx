@@ -5,6 +5,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
     const [counter, setCounter] = useState(initial)
     const [itemStock, setItemStock] = useState(stock)
+    const [color, setColor] = useState(false)
 
     const disminuirCantidad = (valor) => {
         if (valor > 0) {
@@ -23,6 +24,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
         onAdd(counter)
         setItemStock(itemStock - counter)
         setCounter(itemStock - counter)
+        setColor(true)
         }
     }
     useEffect(() => {
