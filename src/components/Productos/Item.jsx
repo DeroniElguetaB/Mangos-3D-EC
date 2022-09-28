@@ -5,7 +5,7 @@ const Item = ({id, imagen, nombre, precio}) => {
     return (
         <div className="Item col-md-4">
                 <div className="card carditem border-warning text-white bg-dark mb-3 col-md-4" key={id}>
-                    <Link to={'/Productos/item/' + id}><img src={imagen} className="card-img-top"></img></Link>
+                    <Link to={'/Productos/item/' + id}><img src={imagen} className="card-img-top" height={300}></img></Link>
                     <div className="card-body">
                         <h5 className="card-title">{nombre}</h5>
                         <strong><h6>${precio}</h6></strong>
