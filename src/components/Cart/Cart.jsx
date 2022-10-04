@@ -19,6 +19,7 @@ const Cart = () => {
             <Main/>
             <div className="Carrito">
                 <h2> Carrito de compra</h2>
+                <hr></hr>
                 <div className="container">
                     {cartTotal() > 0 ?
                         <table className="table">
@@ -34,7 +35,7 @@ const Cart = () => {
                                 </tr>
                                 {cart.map(item => (
                                     <tr key={item.id}>
-                                        <td className="text-start"><img src={item.imagen} alt={item.nombre} title={item.nombre} width="120" /></td>
+                                        <td className="text-start"><Link to={'/Productos/item/'}><img src={item.imagen} alt={item.nombre} title={item.nombre} width="120" /></Link></td>
                                         <td className="text-start align-middle">{item.nombre}</td>
                                         <td className="text-end align-middle">{item.cantidad} x ${item.precio}</td>
                                         <td className="text-end align-middle">${item.cantidad * item.precio}</td>
@@ -51,10 +52,10 @@ const Cart = () => {
                                     <td colSpan={3} className="text-end fw-bold">Total a Pagar</td>
                                     <td className="text-end fw-bold">${cartSuma()}</td>
                                     <td className="text-end">
-                                        <Link to={"/checkout"} title="Finalizar Compra">
-                                        <button type="button" className="carrito btn fondo position-relative" title="Finalizar Compra" width="16">
-                                        Finalizar Compra <FontAwesomeIcon icon={faCartShopping} />
-                                        </button>
+                                        <Link to={'/Checkout'} title="Finalizar Compra">
+                                            <button type="button" className="carrito btn fondo position-relative" title="Finalizar Compra" width="16">
+                                            Finalizar Compra <FontAwesomeIcon icon={faCartShopping} />
+                                            </button>
                                         </Link>
                                     </td>
                                 </tr>

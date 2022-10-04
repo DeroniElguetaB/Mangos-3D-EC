@@ -152,3 +152,7 @@ font-family: 'Roboto Condensed', sans-serif;
 .logotipo{
   border: 2px 2px solid black;
 }
+/* -------------------------------------------------------Checkout------------------------------------------------------------------ */
+.pedido{
+  background-color: orangered;
+}

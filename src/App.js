@@ -1,12 +1,13 @@
 import './App.css';
 import 'core-js/actual';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import Inicio from './components/Pestañas.jsx/Inicio';
-import Compania from './components/Pestañas.jsx/Compañia';
-import Productos from './components/Pestañas.jsx/Productos';
-import ProductosDetalle from './components/Pestañas.jsx/ProductosDetalle';
+import Inicio from './components/Pestañas/Inicio';
+import Compania from './components/Pestañas/Compañia';
+import Productos from './components/Pestañas/Productos';
+import ProductosDetalle from './components/Pestañas/ProductosDetalle';
 import Provider from './components/Context/Context';
 import Cart from './components/Cart/Cart';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path='/Productos/category/:estilo' element={<Productos/>}/>
           <Route exact path='/Productos/item/:id' element={<ProductosDetalle/>}/>
           <Route exact path='/Cart' element={<Cart/>}/>
+          <Route exact path='/Checkout' element={<Checkout/>} />
         </Routes>
       </BrowserRouter>
     </Provider>
