@@ -1,3 +1,18 @@
+PROYECTO MANGOS 3D E-COMMERCE
+
+    Este proyecto consiste en una pagina web e-commerce de venta de productos de impresiones 3D online. Se logra cumplir los objetivos de 
+    
+    interactividad con una pequeña base de datos de productos con su respectiva descripcion, precios, caracteristicas, descripcion, etc.
+
+    La pagina es totalmente funcional, logrando los objetivos de comprar, llenar formularios, filtrado de productos, operaciones en stock y 
+    
+    precios totales, consulta en tiempo real de productos a firestore, crear y vaciar carrito de compra, agregar y quitar productos seleccionados 
+    
+    y finalizado la compra con un identificador de pedido unico. 
+
+DERONI ELGUETA - ALUMNO CODER HOUSE - COMISION 37545
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
