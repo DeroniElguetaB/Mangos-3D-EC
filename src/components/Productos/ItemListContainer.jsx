@@ -22,7 +22,27 @@ const ItemListContainer = () => {
                 setLoading(false);
             }
         });
-    }, [id])
+    }, [id]);
+
+    // useEffect(() => {
+    //     const querydb = getFirestore();
+    //     const queryCollection = query(collection(querydb, "items"));
+    //     const queryFilter = query(queryCollection, where("categoria", "==", "Maquinas"))
+    //     // orderBy("categoria")
+
+    //         if (categoriaId) {
+    //             getDocs(queryFilter).then((res) =>
+    //                     setItems(res.docs.map((product) => ({ id: product.id, ...product.data() }))));
+    //                     setLoading(false)            
+    //         } 
+    //         else {
+    //             getDocs(queryCollection).then((res) =>
+    //                 setItems(
+    //                 res.docs.map((product) => ({ id: product.id, ...product.data() }))));
+    //                 setLoading(false)
+    //         }
+
+    // }, [categoriaId]);
 
     return (
         <div className="container-fluid ilcontainer">

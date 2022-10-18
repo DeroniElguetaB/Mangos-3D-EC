@@ -39,10 +39,10 @@ const Navbar = () => {
                             <Link to={'/Productos'}>PRODUCTOS</Link>
                         </li>
                         <li className="col-md-2">
-                            <Link to={'/Productos/category/Maquinas'}>MAQUINAS BARBERSTYLE</Link>
+                            <Link to={'/Categoria/Maquinas'}>MAQUINAS BARBERSTYLE</Link>
                         </li>
                         <li className="col-md-2">
-                            <Link to={'/Productos/category/Mates'}>MATES STYLE</Link>
+                            <Link to={'/Categoria/Mates'}>MATES STYLE</Link>
                         </li>
                     </ul>
                 </div>
